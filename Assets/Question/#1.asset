@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 505ac820a2ad1164a936243fddd1db27, type: 3}
   m_Name: '#1'
   m_EditorClassIdentifier: 
-  question: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  question: Apa itu Coding?
   answers:
   - 'Lorem '
   - Ipsum

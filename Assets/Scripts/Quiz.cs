@@ -11,6 +11,7 @@ public class Quiz : MonoBehaviour
     [SerializeField] TextMeshProUGUI questionText;
     [SerializeField] List<QuestionSO> questions = new List<QuestionSO>();
     [SerializeField] QuestionSO currentQuestion;
+    public bool correct;
 
     [Header("Answers")]
     [SerializeField] GameObject[] answerButtons;
@@ -66,6 +67,7 @@ public class Quiz : MonoBehaviour
         
         if (index == currentQuestion.GetCorrectAnswerIndex())
         {
+            correct = true;
             questionText.text = "Benar";
             buttonImage = answerButtons[index].GetComponent<Image>();
             buttonImage.sprite = correctAnswerSprite;
@@ -73,6 +75,7 @@ public class Quiz : MonoBehaviour
         }
         else
         {
+            correct = false;
             correctAnswerIndex = currentQuestion.GetCorrectAnswerIndex();
             string correctAnswer = currentQuestion.GetAnswerIndex(correctAnswerIndex);
             questionText.text = "Jawaban yang benar adalah:" + correctAnswer;
